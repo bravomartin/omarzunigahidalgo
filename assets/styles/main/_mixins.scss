@@ -1,0 +1,140 @@
+
+
+$break-medium: "screen and (max-width: 800px)";
+$break-small: "screen and (max-width: 480px)";
+
+
+$break-small-phone: "only screen and (min-device-width : 320px) and (max-device-width : 374px) and (orientation : portrait)";
+
+$margin-left-small: 20px;
+$margin-left-large: 292px; 
+
+
+$color-white : #fefefe;
+$color-black: #2a2a2a;
+$color-grey: hsl(53,4,50);
+$color-text: $color-white;
+$color-background-white: hsl(53,4,95);
+$color-background-black: hsl(53,3,10);
+
+$size-normal: 1em;
+$size-small: .75em;
+$size-smaller: .55em;
+
+$weight-normal: 300;
+
+
+$transition-opacity: opacity .4s ease-out;
+
+
+
+
+
+@mixin underline() {
+	text-decoration: underline;
+}
+
+hr {
+  clear:both;
+  visibility: hidden;
+  margin: 0;
+}
+
+@keyframes color-fade {
+    0% { background-color: hsl(100,4,70); }
+    100% { background-color: hsl(250,4,60); }
+}
+
+  %hide {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    // margin-top: -2px;
+    &:first-child{
+    	margin-top: 0px;
+    }
+  }
+  %show {
+    max-height: 100px;
+    opacity: 1;
+    // margin-top: -2px;
+    &:first-child{
+    	margin-top: 0px;
+    }
+    overflow: hidden;
+  }
+
+  %links-white{
+		a {
+			color:$color-white;
+			&:active {
+				color: $color-black;
+			}
+			&:hover {
+				@media #{$break-medium} {
+					color: $color-black!important;
+					.touch & { color: $color-white;}	
+				}
+			}
+		}
+  }
+
+  %links-white-underlined{
+		a {
+			color:$color-white;
+			border-bottom: 2px solid $color-white;
+			&:active {
+				color: $color-black;
+				border-bottom: 2px solid $color-black;
+			}
+			&:hover {
+				color: $color-black;
+				border-bottom: 2px solid $color-black;
+				.touch & {
+					@media #{$break-medium} {
+						color: $color-white;
+						border-bottom: 2px solid $color-white;
+					}
+				}
+
+			}
+		}
+  }
+
+  %links-black{
+		a {
+			color:$color-black;
+			&:active {
+				color: $color-white;
+			}
+			&:hover {
+				color: $color-white;
+				.touch & { 
+					@media #{$break-medium} {
+						color: $color-black;
+					}
+				}
+			}
+		}
+  }
+
+%links-black-underlined{
+		a {
+			color:$color-black;
+			border-bottom: 2px solid $color-black;
+			&:active {
+				color: $color-white;
+				border-bottom: 2px solid $color-white;
+			}
+			&:hover {
+				color: $color-white;
+				border-bottom: 2px solid $color-white;
+				.touch & {
+					@media #{$break-medium} {
+						color: $color-black;
+						border-bottom: 2px solid $color-black;
+					}
+				}
+			}
+		}
+  }

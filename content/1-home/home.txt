@@ -1,0 +1,21 @@
+Title: Intro
+
+----
+
+Texten: 
+
+(image:teddy_berlinale_2.png width: 300)
+San Cristóbal 
+Teddy Award 2015
+
+----
+
+Textes: 
+
+(image:teddy_berlinale_2.png width: 300)
+San Cristóbal 
+Teddy Award 2015
+
+----
+
+Backgroundvideo: intro_web
